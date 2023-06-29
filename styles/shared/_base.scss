@@ -1,0 +1,48 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: calc(100vw / 1920 * 10);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  user-select: none;
+  overscroll-behavior: none;
+
+  @include media("<=tablet") {
+    font-size: 10px;
+    overflow-x: hidden;
+  }
+}
+
+body {
+  @extend %paragraph-16;
+
+  background: $color-black;
+  color: $color-white;
+}
+
+.line-parent {
+  vertical-align: top;
+  display: inline-block;
+
+  .font-semibold {
+    display: inline-flex;
+  }
+}
+
+.line-parent,
+.font-semibold {
+  overflow: hidden;
+  height: inherit;
+}
+
+.line-child {
+  overflow: hidden;
+  height: inherit;
+  display: inline-block;
+  vertical-align: inherit;
+}

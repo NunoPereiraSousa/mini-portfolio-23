@@ -1,0 +1,170 @@
+.navigation {
+  @extend %position-fixed;
+
+  height: fit-content;
+  mix-blend-mode: difference;
+  padding: 3rem 8rem;
+  z-index: z("desktop-navigation");
+
+  &.desktop-navigation {
+    @include media("<=tablet") {
+      display: none;
+    }
+  }
+
+  &.mobile-navigation {
+    // background-color: $color-black;
+    height: 100vh;
+    mix-blend-mode: normal;
+    padding: 8rem 2rem 4rem;
+    width: 100vw;
+
+    display: none;
+    z-index: z("mobile-navigation");
+
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include media("<=tablet") {
+      display: flex;
+    }
+  }
+}
+
+.navigation_show {
+  height: 100%;
+  z-index: z("mobile-navigation");
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .navigation_logo {
+    color: $color-black;
+  }
+}
+
+.navigation_wrapper {
+  @extend %max-width;
+  @extend %space-between;
+}
+
+.navigation_logo {
+}
+
+.navigation_links {
+  display: flex;
+  gap: 6rem;
+}
+
+.text-reveal-navigation {
+  @include double-line-animation(25deg, -180%, 180%, 100%, $font-body, 500, 0);
+}
+
+.navigation_logo {
+}
+
+.navigation_link {
+}
+
+/* MOBILE NAVIGATION */
+
+.navigation_actions {
+  @extend %center-between;
+
+  height: fit-content;
+  width: 100%;
+}
+
+.navigation_background {
+  @extend %position-fixed;
+
+  background-color: $color-black;
+  height: 100%;
+  z-index: -1;
+  width: 100%;
+}
+
+.navigation_cross {
+  svg {
+    display: block;
+  }
+}
+
+.navigation_hamburger {
+  cursor: pointer;
+  height: 0.8rem;
+  position: relative;
+  width: 2rem;
+}
+
+.navigation_hamburger_lines {
+  background-color: $color-white;
+  display: block;
+  height: 0.1rem;
+  left: 0;
+  position: absolute;
+  width: 2rem;
+
+  &:first-child {
+    top: 0;
+  }
+
+  &:last-child {
+    bottom: 0;
+  }
+}
+
+.navigation_mobile_links {
+  @extend %column-direction;
+
+  .navigation_link {
+    @extend %heading-220;
+
+    color: $color-black;
+    display: block;
+    margin: auto;
+    text-align: center;
+
+    &.active {
+      color: $color-pink;
+    }
+  }
+}
+
+.navigation_link_wrapper {
+  position: relative;
+  padding: 2rem 0 0;
+
+  &:not(&:last-child) .navigation_link_border:last-child {
+    display: none;
+  }
+}
+
+.navigation_link_border {
+  background-color: $color-white;
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0.1rem;
+
+  &:first-child {
+    top: 0;
+  }
+
+  &:last-child {
+    bottom: 0;
+  }
+}
+
+.navigation_socials {
+  @extend %center-between;
+}
+
+.navigation_social_media_link {
+  @include media("<=tablet") {
+    text-transform: uppercase;
+  }
+}
