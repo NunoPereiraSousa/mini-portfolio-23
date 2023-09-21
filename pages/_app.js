@@ -109,11 +109,11 @@ export default function App({ Component, pageProps }) {
         direction: "horizontal",
         tablet: {
           direction: "vertical",
-          lerp: 0.05,
+          smooth: false,
         },
         smartphone: {
           direction: "vertical",
-          lerp: 0.05,
+          smooth: false,
         },
         // multiplier: 1,
         // ... all available Locomotive Scroll instance options
