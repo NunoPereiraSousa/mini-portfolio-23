@@ -22,6 +22,14 @@ const routes = [
   },
 ];
 
+export const linkResolver = (doc) => {
+  if (doc.uid === "homepage") {
+    return `/`;
+  }
+
+  if (doc.type === "404") return `/${doc.uid}`;
+};
+
 /**
  * Creates a Prismic client for the project's repository. The client is used to
  * query content from the Prismic API.
