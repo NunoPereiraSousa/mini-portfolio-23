@@ -1,12 +1,6 @@
 import { PrismicRichText } from "@prismicio/react";
-import { useRef, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Bars from "@/components/Elements/Bars/Bars";
 import Project from "@/components/Elements/Projects/Project";
-import useIsomorphicLayoutEffect from "@/components/Animations/useIsomorphicLayoutEffect";
-
-gsap.registerPlugin(ScrollTrigger);
 
 /**
  * @typedef {import("@prismicio/client").Content.WorksSlice} WorksSlice
@@ -14,18 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
  * @param {WorksProps}
  */
 const Works = ({ slice }) => {
-  const element = useRef(null);
-
-  useIsomorphicLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      return () => {};
-    }, element);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
-    <section className="works" data-scroll-section ref={element}>
+    <section className="works" data-scroll-section>
       <div className="works_wrapper">
         <div className="works_content">
           <div className="works_left">
