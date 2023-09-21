@@ -6,11 +6,11 @@
   overflow: hidden;
   padding: 4rem;
   z-index: z("preloader");
-  // width: 100vw;
   will-change: transform;
 
   @include media("<=tablet") {
     padding: 6rem 2rem;
+    height: 100svh;
   }
 }
 
