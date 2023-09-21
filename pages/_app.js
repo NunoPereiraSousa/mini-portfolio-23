@@ -138,7 +138,9 @@ export default function App({ Component, pageProps }) {
       <AnimationsProvider>
         {/* <Cursor /> */}
         {asPath === "/" ? (
-          <>{/* <Preloader /> <ImagesBox /> <OpenToWork /> */}</>
+          <>
+            <Preloader /> <ImagesBox /> <OpenToWork />
+          </>
         ) : (
           ""
         )}
