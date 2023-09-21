@@ -109,12 +109,11 @@ export default function App({ Component, pageProps }) {
         direction: "horizontal",
         tablet: {
           direction: "vertical",
-          smooth: false,
         },
         smartphone: {
           direction: "vertical",
-          smooth: false,
         },
+        lerp: 0.1,
         // multiplier: 1,
         // ... all available Locomotive Scroll instance options
       }}
@@ -138,9 +137,7 @@ export default function App({ Component, pageProps }) {
       <AnimationsProvider>
         {/* <Cursor /> */}
         {asPath === "/" ? (
-          <>
-            <Preloader /> <ImagesBox /> <OpenToWork />
-          </>
+          <>{/* <Preloader /> <ImagesBox /> <OpenToWork /> */}</>
         ) : (
           ""
         )}
