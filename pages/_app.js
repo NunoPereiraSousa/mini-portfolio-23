@@ -109,10 +109,13 @@ export default function App({ Component, pageProps }) {
         direction: "horizontal",
         tablet: {
           direction: "vertical",
-          breakpoint: 0,
+          smooth: true,
+          smoothMobile: true,
         },
         smartphone: {
           direction: "vertical",
+          smooth: true,
+          smoothMobile: true,
         },
       }}
       watch={
