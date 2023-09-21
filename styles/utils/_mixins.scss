@@ -71,6 +71,13 @@
   justify-content: center;
 }
 
+@mixin figure($height, $width) {
+  height: $height;
+  // overflow: hidden;
+  position: relative;
+  width: $width;
+}
+
 @mixin double-line-animation(
   $rotation-amount,
   $hover-translateY-amount,

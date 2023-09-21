@@ -1,5 +1,6 @@
 @import "./shared/_reset";
 @import "./shared/_variables";
+@import "./shared/_fonts";
 @import "./shared/_responsive";
 @import "./shared/_base";
 @import "./shared/_animations";
@@ -12,14 +13,13 @@
 @import "./typography/_classes";
 
 @import "./components/_preloader";
-@import "./components/_navigation";
-@import "./components/_footer";
-@import "./components/_last_update";
-@import "./components/_project";
+@import "./components/_bars";
+@import "./components/_award";
 
-@import "./blocs/_marquee";
-@import "./blocs/_content_list";
+@import "./blocs/_hero";
+@import "./blocs/_works";
+@import "./blocs/_awards";
+@import "./blocs/_about";
+@import "./blocs/_contacts";
 
-@import "./pages/_homepage";
 @import "./pages/_404";
-@import "./pages/_works";

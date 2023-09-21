@@ -1,22 +1,27 @@
 .paragraph {
   @extend %paragraph-16;
 
+  will-change: transform;
+  white-space: normal;
+
   strong {
     font-weight: 700;
   }
 }
 
 .heading {
+  will-change: transform;
+
   &.xxl {
-    @extend %heading-220;
+    @extend %heading-460;
   }
   &.xl {
-    @extend %heading-120;
+    @extend %heading-240;
   }
   &.lg {
-    @extend %heading-36;
+    @extend %heading-180;
   }
   &.md {
-    @extend %heading-16;
+    @extend %heading-140;
   }
 }

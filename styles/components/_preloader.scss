@@ -1,138 +1,52 @@
 .preloader {
   @extend %position-fixed;
 
-  background-color: $color-black;
+  background-color: $color-blue;
   height: 100vh;
+  overflow: hidden;
+  padding: 4rem;
   z-index: z("preloader");
-  width: 100vw;
-}
+  // width: 100vw;
+  will-change: transform;
 
-.preloader_wrapper {
-  @extend %max-width;
-  @extend %flex-center;
-
-  height: 100%;
-  width: 100%;
-}
-
-.preloader_container {
-  @extend %column-direction-center;
-
-  gap: 6.6rem;
-  max-width: 74.7rem;
-
-  opacity: 0;
-  visibility: hidden;
-}
-
-.preloader_description {
-  text-align: center;
-}
-
-.preloader_figure {
-  height: 24rem;
-  position: relative;
-  width: 40rem;
-}
-
-.preloader_image {
-  @extend %image-cover;
-
-  border-radius: 0.4rem;
-}
-
-.preloader_indicator {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-
-  max-height: 2.8rem;
-  overflow: hidden;
-}
-
-.preloader_counter_wrapper {
-  @extend %center-between;
-
-  gap: 3rem;
-  width: 100%;
-}
-
-.preloader_counter_init {
-  display: flex;
-}
-
-.preloader_counter_number {
-}
-
-.preloader_counter_bar {
-  background-color: $color-white;
-  display: block;
-  height: 0.1rem;
-  width: 100%;
-
-  transform-origin: left bottom;
-  //   transform: scaleX(0);
-}
-
-.preloader_counter_end {
-  min-width: 5.4rem;
-  text-align: right;
-}
-
-.preloader_button_wrapper {
-  @extend %justify-center;
-}
-
-.preloader_button {
-  animation: color-switcher step-start infinite 1s;
-  cursor: pointer;
-
-  // &:hover {
-  //   color: $color-pink;
-  // }
-}
-
-.grain {
-  @extend %position-fixed;
-
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  z-index: z("grain");
-  pointer-events: none;
-
-  &::after {
-    content: "";
-    animation: grain 8s steps(10) infinite;
-    background-image: url("../../public/grain.png");
-    opacity: 0.03;
-    height: 300%;
-    width: 300%;
-    position: fixed;
-    top: -100%;
-    left: -50%;
-    overflow: hidden;
+  @include media("<=tablet") {
+    padding: 6rem 2rem;
   }
 }
 
-.greetings {
-  @extend %position-fixed;
+.preloader_wrapper {
+  max-width: 192rem;
+  margin: auto;
 
-  background-color: $color-white;
-  height: 100vh;
-  z-index: z("preloader");
-  width: 100vw;
-}
-
-.greetings_wrapper {
-  @extend %max-width;
-  @extend %flex-center;
-
-  height: 100%;
   width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.greetings_description {
-  color: $color-black;
-  text-align: center;
+.preloader_top {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.preloader_label {
+}
+
+.preloader_bottom {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.preloader_counter_container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.preloader_counter_text {
+  @extend %heading-240;
 }
