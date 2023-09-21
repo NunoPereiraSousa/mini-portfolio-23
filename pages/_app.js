@@ -109,13 +109,11 @@ export default function App({ Component, pageProps }) {
         direction: "horizontal",
         tablet: {
           direction: "vertical",
+          breakpoint: 0,
         },
         smartphone: {
           direction: "vertical",
         },
-        lerp: 0.1,
-        // multiplier: 1,
-        // ... all available Locomotive Scroll instance options
       }}
       watch={
         [
