@@ -8,6 +8,11 @@
   @include media("<=tablet") {
     padding: 2rem;
   }
+
+  @include media("<phone") {
+    overflow: auto;
+    height: auto;
+  }
 }
 
 .error_wrapper {
