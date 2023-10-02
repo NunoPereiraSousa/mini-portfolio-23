@@ -7,7 +7,10 @@ import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Award({ image, name, description, i }) {
+export default function Award({ friction, image, name, description, i }) {
+  console.log("====================================");
+  console.log(friction);
+  console.log("====================================");
   const element = useRef(null);
   const border = useRef(null);
 
@@ -37,7 +40,10 @@ export default function Award({ image, name, description, i }) {
     return () => ctx.revert(); // cleanup
   }, []);
   return (
-    <div className="award" ref={element}>
+    <div
+      className={friction === true ? "award friction" : "award"}
+      ref={element}
+    >
       <span className="award_border" ref={border}></span>
 
       <div className="award_info">

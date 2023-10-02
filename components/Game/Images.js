@@ -1,7 +1,7 @@
 import { COUNTRIES } from "@/utils/flags";
 
 import { useRef, useState, useContext } from "react";
-import { gsap } from "gsap";
+import gsap, {Power2} from "gsap";
 import useIsomorphicLayoutEffect from "../Animations/UseIsomorphicLayoutEffect";
 import AnimationsContext from "@/context/AnimationsContext";
 

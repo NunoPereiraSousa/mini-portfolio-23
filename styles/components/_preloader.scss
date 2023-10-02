@@ -23,6 +23,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  filter: blur(4rem);
 }
 
 .preloader_top {
@@ -44,6 +46,9 @@
   display: flex;
   justify-content: center;
   overflow: hidden;
+
+  visibility: hidden;
+  opacity: 0;
 }
 
 .preloader_counter_text {

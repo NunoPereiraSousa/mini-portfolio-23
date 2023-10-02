@@ -98,7 +98,7 @@ export async function getStaticProps({ params, previewData }) {
 
   const page = await client.getSingle("homepage", {
     fetchLinks:
-      "country.image, project.name, project.link, project.image, project.mystery, award.image, award.name, award.description, contact.icon, contact.link",
+      "country.image, project.name, project.link, project.image, project.mystery, award.image, award.friction, award.name, award.description, contact.icon, contact.link",
   });
   const preloader = await client.getSingle("preloader");
 

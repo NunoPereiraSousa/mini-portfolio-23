@@ -3,7 +3,6 @@ import "locomotive-scroll/dist/locomotive-scroll.css";
 
 import Link from "next/link";
 import { PrismicLink, PrismicProvider } from "@prismicio/react";
-// import { PrismicPreview } from "@prismicio/next";
 import { repositoryName, linkResolver } from "../prismicio";
 
 import Heading from "@/components/Elements/Heading";
@@ -23,11 +22,6 @@ import TransitionComponent from "@/components/Animations/Transition";
 import OpenToWork from "@/components/Elements/Links/OpenToWork";
 import Images from "@/components/Game/Images";
 import ImagesBox from "@/components/Game/ImagesBox";
-// import ScrollTriggerProxy from "@/components/ScrollTriggerProxy";
-// import { SwitchTransition, Transition } from "react-transition-group";
-// import gsap from "gsap";
-// import TransitionComponent from "../components/Animations/Transition";
-// import { TransitionProvider } from "../context/TransitionContext";
 
 const richTextComponents = {
   paragraph: ({ children }) => <Paragraph>{children}</Paragraph>,
@@ -100,7 +94,7 @@ export default function App({ Component, pageProps }) {
   const element = useRef(null);
   const containerRef = useRef(null);
   const { scroll } = useLocomotiveScroll();
-  const { router, asPath } = useRouter(); // With next/router
+  const { router, asPath } = useRouter();
 
   return (
     <LocomotiveScrollProvider
@@ -136,7 +130,6 @@ export default function App({ Component, pageProps }) {
       <ScrollTriggerProxy />
 
       <AnimationsProvider>
-        {/* <Cursor /> */}
         {asPath === "/" ? (
           <>
             <Preloader /> <ImagesBox /> <OpenToWork />

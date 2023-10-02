@@ -28,6 +28,15 @@
       "image": {
         "type": "Image",
         "config": { "label": "Image", "constraint": {}, "thumbnails": [] }
+      },
+      "friction": {
+        "type": "Boolean",
+        "config": {
+          "label": "Friction",
+          "placeholder_false": "false",
+          "placeholder_true": "true",
+          "default_value": false
+        }
       }
     }
   }

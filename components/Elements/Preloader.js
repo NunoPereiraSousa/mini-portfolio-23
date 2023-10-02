@@ -33,12 +33,12 @@ export default function Preloader({ preloader }) {
         width: window.innerWidth,
       });
 
-      gsap.set(".preloader_wrapper", {
-        filter: "blur(4rem)",
-      });
-      gsap.set(".preloader_counter_container", {
-        autoAlpha: 0,
-      });
+      // gsap.set(".preloader_wrapper", {
+      //   filter: "blur(4rem)",
+      // });
+      // gsap.set(".preloader_counter_container", {
+      //   autoAlpha: 0,
+      // });
 
       let font1 = new FontFaceObserver("Mango Grotesque", {
         weight: 500,

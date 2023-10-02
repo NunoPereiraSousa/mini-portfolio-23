@@ -179,6 +179,18 @@ interface AwardDocumentData {
    *
    */
   image: prismic.ImageField<never>;
+  /**
+   * Friction field in *Award*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: award.friction
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+   *
+   */
+  friction: prismic.BooleanField;
 }
 /**
  * Award document from Prismic

@@ -7,6 +7,20 @@
     padding-left: 0;
   }
 
+  &.friction {
+    transform: rotateY(180deg) rotateX(180deg);
+    transition: $transition;
+    transition-duration: 0.7s;
+
+    @include media("<=tablet") {
+      transform: rotate(0);
+    }
+
+    &:hover {
+      transform: rotate(0);
+    }
+  }
+
   &:nth-child(2),
   &:nth-child(5),
   &:nth-child(8),
@@ -60,10 +74,15 @@
 
 .award_figure {
   @include figure(32.6rem, 24.6rem);
+
+  overflow: hidden;
 }
 
 .award_image {
   @extend %image-cover;
+
+  transform-origin: 0 0;
+  transition: $transition;
 }
 
 .award_descriptions {

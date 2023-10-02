@@ -48,15 +48,17 @@
 
   &:hover {
     transform: translateX(10%);
-
-    @include media("<=tablet") {
-      transform: translateX(0%);
-    }
   }
 }
 
 .contact_figure {
-  max-height: 14.6rem;
+  @include media("<=laptop") {
+    width: 80%;
+  }
+
+  @include media("<=small-laptop") {
+    width: 70%;
+  }
 }
 
 .contact_image {

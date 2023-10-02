@@ -27,6 +27,7 @@ const Awards = ({ slice }) => {
               <Award
                 key={index}
                 i={index}
+                friction={award.awards.data?.friction}
                 name={award.awards.data?.name}
                 image={award.awards.data?.image}
                 description={award.awards.data?.description}

@@ -12,19 +12,6 @@
     padding: 0 2rem 14rem;
   }
 
-  // &::after {
-  //   content: "";
-  //   background-color: $color-orange;
-
-  //   height: 100%;
-  //   width: 101.5rem;
-
-  //   position: absolute;
-  //   left: 0rem;
-  //   top: 0;
-  //   z-index: -1;
-  // }
-
   .bars {
     margin-left: 12rem;
 
@@ -165,7 +152,7 @@
 }
 
 .about_background_figure {
-  @include figure(108rem, 169.8rem);
+  @include figure(108rem, 190.8rem);
 
   @include media("<=tablet") {
     @include figure(100rem, 100vw);
