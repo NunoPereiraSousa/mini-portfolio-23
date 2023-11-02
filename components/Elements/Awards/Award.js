@@ -8,9 +8,6 @@ import { useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Award({ friction, image, name, description, i }) {
-  console.log("====================================");
-  console.log(friction);
-  console.log("====================================");
   const element = useRef(null);
   const border = useRef(null);
 

@@ -76,7 +76,7 @@ export default function Preloader({ preloader }) {
           )
           .to(Count, {
             delay: 1,
-            val: final,
+            val: Math.floor(Math.random() * 10000),
             roundProps: "val",
             duration: 2,
             ease: "expo.out",
